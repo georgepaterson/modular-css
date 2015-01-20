@@ -13,7 +13,16 @@ In writing modular CSS we want to apply the object oriented principles of abstra
 Selectors are the primary abstraction layer for CSS; classes and ID's should be used to change the properties of an element. Naming conventions for CSS selectors should decribe the role of the module within the site, making the element's role within the site easier to understand.
 
 Additionally, CSS properties can be abstracted as CSS variables http://caniuse.com/#feat=css-variables, creating an internal abstraction layer during development. Although there is a W3C specification for variables, CSS properties can also be abstracted using CSS preprocessors.
- 
+
+#### Abstraction example
+
+	<div class="message"></div>
+
+	<div class="message message-warning"></div>
+	
+	<div class="message message-error"></div>
+
+A message box designed to send messages to the user is given a class describing it's role within the site. It may have a basic message state to communicate a message to the user using the message class. This message box may be modified using an additional message-warning or messgae-error class changing the state of the message.	
 
 ### Encapsulation
 
