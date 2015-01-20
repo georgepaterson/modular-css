@@ -6,23 +6,25 @@ In writing modular CSS we want to apply the object oriented concepts of abstract
 
 *Only the possible states and behaviours of the abstracted object are accessible, the internal implementation of the object remains hidden. By abstracting the internal implementation of the object, we make the object’s purpose easier to understand.*
 
-Abstraction in CSS can be implemented in different ways, naming conventions for classes and ID's should decribe the role of the module within the site.
+Selectors are the primary abstraction layer for CSS; classes and ID's should be used to change the properties of an element. Naming conventions for CSS selectors should decribe the role of the module within the site, making the element's role within the site easier to understand.
 
-CSS properties can be abstracted as CSS variables http://caniuse.com/#feat=css-variables, there is a W3C specification for variables. CSS properties can also be abstracted using CSS preprocessors. 
+Additionally CSS properties can be abstracted as CSS variables http://caniuse.com/#feat=css-variables, creating an internal abstraction layer during development. There is a W3C specification for variables, CSS properties can also be abstracted using CSS preprocessors. 
 
 ## Encapsulation
 
-*The object is structured to be self-contained, everything the object needs is available internally. The internal state of the object is not directly accessible externally except through the abstraction layer.*
+*The object is structured to be self-contained, everything the object needs is available internally. The internal state of the object is not directly accessible except through the abstraction layer.*
 
-CSS encapsulation can be difficult as CSS properties cascade through the style sheet and weak encapsulation is necessary to benefit from this.
+The abstraction layer are the selectors, the internal state are the CSS properties of the selected element.  
 
-As with abstraction, the selector naming convention describing the role of the module should be sufficiently unique to encapsulate the module.   
+CSS encapsulation can be difficult as CSS properties cascade through the style sheet and weak encapsulation is necessary to benefit from this. At times it may even be necessary to directly apply CSS properties to an element through inline styling but in general this should be avoided and styling applied through the abstraction layer. The selector naming convention describing the role of the module should be unique to encapsulate the module.   
 
-Scoped styling is a W3C specification that specifically supports encapsulation http://caniuse.com/#feat=style-scoped
+Scoped styling is a W3C specification that specifically supports encapsulation http://caniuse.com/#feat=style-scoped allowing styles to be scoped to a specific part of the document.
 
 ## Inheritence
 
 *Through inheritance, one object can inherit the characteristics of another object, this allows an existing object to be extended and similar objects to share properties and behaviours.*
+
+
 
 ## Polymorphism
 
